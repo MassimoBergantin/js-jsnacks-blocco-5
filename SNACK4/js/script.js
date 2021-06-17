@@ -48,7 +48,7 @@ var students = [
 ]
 
 for (var i = 0; i < students.length; i++) {
-    var description = students[i].Descrizione = prompt('Inserisci descrizione per ' + students[i].nome + ' ' + students[i].cognome);
+    var description = students[i].Descrizione = prompt('Inserisci descrizione per ' + students[i].Nome + ' ' + students[i].Cognome);
     students[i].Descrizione = description;
   }
 
