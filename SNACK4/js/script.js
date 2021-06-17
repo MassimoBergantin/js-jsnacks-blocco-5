@@ -1,31 +1,62 @@
+// Snack 4 - 
+// Creare un array di 3 studenti (3 oggetti in un array, quindi) con queste proprietà:
+// nome
+// cognome
+// age
+// descrizione
+
+// Per nome, cognome ed age assegnate direttamente nel codice i valori che volete. 
+// ATTENZIONE: la descrizione invece sarà l’unico valore vuoto, stringa vuota.
+
+// {
+//   nome: 'Pippo',
+//   cognome: 'Baudo',
+//   age: 80,
+//   descrizione: ''
+// } 
+
+// Successivamente, con dei prompt chiediamo di volta in volta all’utente la descrizione di ciascun studente, salviamola quindi all’interno della sua proprietà. 
+
+// Nota bene: questo naturalmente, in un ciclo, per ciascun studente. ;) 
+
+// Stampiamo con un console.log il risultato di questo array di studenti aggiornato.
+
+// Bonus
+// Visualizzare nell’html questi dati in una forma tabellare.
 
 
 
+var students = [
+    {
+        Nome : "Massimo",
+        Cognome : "Bergantin",
+        Anni : 25,
+        Descrizione : ""
+    },
+    {
+        Nome : "Mirco",
+        Cognome : "Tioli",
+        Anni : 35,
+        Descrizione : ""
+    },
+    {
+        Nome : "Roberto",
+        Cognome : "Bassani",
+        Anni : 55,
+        Descrizione : ""
+    }
+]
 
-// js-snack-4
-// In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby,
-// chiedi all’utente il suo nome e comunicagli se può partecipare o no alla festa.
+for (var i = 0; i < students.length; i++) {
+    var description = students[i].Descrizione = prompt('Inserisci descrizione per ' + students[i].nome + ' ' + students[i].cognome);
+    students[i].Descrizione = description;
+  }
 
 
-
-var utente = prompt('il nome della prenotazione');
-var invitatiFesta = ['ottavio','filippo','roberto'];
-
-var check = false;
-
-for (var x = 0; x < invitatiFesta.length; x++) {
-    if (invitatiFesta[x] === utente)
-    check = true;
+   for (var x = 0; x < students.length; x++) {
+  
+    for ( var key in students[x]) {
+      console.log(key, students[x][key]);
+    }
+    
 }
-
-if (check) {
-    document.getElementById('invitati').innerHTML = 'Benvenuto!';
-
-} else {
-    document.getElementById('invitati').innerHTML = 'Non sei stato invitato!';
-}
-
-
-
-
-
